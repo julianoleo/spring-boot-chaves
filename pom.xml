@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.juliano</groupId>
-	<artifactId>apigerfin</artifactId>
+	<artifactId>apichaves</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>API Spring MongoDB Para Gestão de Contas</name>
-	<description>API Spring MongoDB Para Gestão de Contas</description>
+	<name>API Spring MongoDB Para Gestão de Chaves</name>
+	<description>API Spring MongoDB Para Gestão de Chaves</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
