@@ -1,5 +1,6 @@
 package com.juliano.apichaves;
 
+import com.juliano.apichaves.repository.ChavesRepository;
 import com.juliano.apichaves.repository.ContaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -12,7 +13,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 public class ApiChavesApplication implements CommandLineRunner {
 
 	@Autowired
-	private ContaRepository contaRepository;
+	private ChavesRepository chavesRepositoryy;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ApiChavesApplication.class, args);
