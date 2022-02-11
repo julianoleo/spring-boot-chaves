@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9499409c-779a-4b5a-8ef1-7fc96c8b75d0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/ApiChavesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/ApiChavesApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/controller/ContaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/controller/ContaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/controller/MovimentacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/controller/MovimentacaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/logs/APILogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/logs/APILogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/model/Conta.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/model/ContaDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/model/Movimentacao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/model/RequisicaoDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/model/ResponseDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/repository/ContaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/repository/MovimentacaoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/service/ContaService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/service/MovimentacaoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/controller/ChavesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/controller/ChavesController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,26 +38,26 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/exceptions" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/logs" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Juliano\Desktop\Projetos\spring-boot-chaves\src\main\java\com\juliano\apichaves\logs" />
       <recent name="C:\Users\Juliano\Desktop\Projetos\spring-boot-chaves\src\main\java\com\juliano\apichaves\exceptions" />
       <recent name="C:\Users\Juliano\Desktop\Projetos\spring-boot-chaves\src\main\java\com\juliano\pessoas\utils" />
       <recent name="C:\Users\Juliano\Desktop\Projetos\spring-boot-chaves\src\main\java\com\juliano\pessoas\logs" />
       <recent name="C:\Users\Juliano\Desktop\Projetos\spring-boot-chaves\src\main\java\com\juliano\pessoas\exceptions" />
-      <recent name="C:\Users\Juliano\Desktop\Projetos\spring-boot-chaves\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Juliano\Desktop\Projetos\spring-boot-chaves\src\main\resources" />
       <recent name="C:\Users\Juliano\Desktop\Projetos\spring-boot-chaves\src\main\java\com\juliano\pessoas\utils" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.juliano.apichaves.controller" />
       <recent name="com.juliano.apichaves.autentication" />
       <recent name="com.juliano.apichaves.service" />
       <recent name="com.juliano.apichaves.repository" />
       <recent name="com.juliano.apichaves.model" />
-      <recent name="com.juliano.pessoas.controller" />
     </key>
   </component>
   <component name="RunManager">
