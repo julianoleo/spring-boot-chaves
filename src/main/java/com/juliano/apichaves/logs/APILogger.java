@@ -1,8 +1,8 @@
 package com.juliano.apichaves.logs;
 
+import com.juliano.apichaves.logs.models.ResponseDto;
 import com.juliano.apichaves.exceptions.models.ErrorResponseDto;
-import com.juliano.apichaves.model.RequisicaoDto;
-import com.juliano.apichaves.model.ResponseDto;
+import com.juliano.apichaves.logs.models.RequisicaoDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -12,7 +12,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.servlet.http.HttpServletRequest;
-
 import java.util.List;
 
 import static net.logstash.logback.argument.StructuredArguments.kv;
