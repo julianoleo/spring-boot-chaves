@@ -5,26 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9499409c-779a-4b5a-8ef1-7fc96c8b75d0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/ApiGerenciadorFinanceiroApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/ApiChavesApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/controller/ContaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/controller/ContaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/controller/MovimentacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/controller/MovimentacaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/exceptions/ExcpetionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/exceptions/ExcpetionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/exceptions/NoContentRuntimeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/exceptions/NoContentRuntimeException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/exceptions/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/exceptions/NotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/exceptions/models/CamposErros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/exceptions/models/CamposErros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/exceptions/models/DetalhesExcecao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/exceptions/models/DetalhesExcecao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/exceptions/models/ErrorResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/exceptions/models/ErrorResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/logs/APILogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/logs/APILogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/model/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/model/Conta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/model/ContaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/model/ContaDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/model/Movimentacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/model/Movimentacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/model/RequisicaoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/model/RequisicaoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/model/ResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/model/ResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/repository/ContaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/repository/ContaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/repository/MovimentacaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/repository/MovimentacaoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/service/ContaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/service/ContaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/gerfin/service/MovimentacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/chaves/service/MovimentacaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/juliano/gerfin/ApiGerenciadorFinanceiroApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/juliano/chaves/ApiChavesApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/exceptions/UnauthorizedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/model/Chaves.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/repository/ChavesRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/service/ChavesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/exceptions/ExcpetionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/exceptions/ExcpetionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/logback.xml" beforeDir="false" />
     </list>
@@ -59,11 +46,11 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/exceptions" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Juliano\Desktop\Projetos\spring-boot-chaves\src\main\java\com\juliano\apichaves\exceptions" />
       <recent name="C:\Users\Juliano\Desktop\Projetos\spring-boot-chaves\src\main\java\com\juliano\pessoas\utils" />
       <recent name="C:\Users\Juliano\Desktop\Projetos\spring-boot-chaves\src\main\java\com\juliano\pessoas\logs" />
       <recent name="C:\Users\Juliano\Desktop\Projetos\spring-boot-chaves\src\main\java\com\juliano\pessoas\exceptions" />
@@ -74,11 +61,11 @@
       <recent name="C:\Users\Juliano\Desktop\Projetos\spring-boot-chaves\src\main\java\com\juliano\pessoas\utils" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.juliano.apichaves.service" />
+      <recent name="com.juliano.apichaves.repository" />
+      <recent name="com.juliano.apichaves.model" />
       <recent name="com.juliano.pessoas.controller" />
       <recent name="com.juliano.pessoas.service" />
-      <recent name="com.juliano.pessoas.repository" />
-      <recent name="com.juliano.pessoas.model" />
-      <recent name="com.juliano.pessoas.autentication" />
     </key>
   </component>
   <component name="RunManager">
@@ -86,7 +73,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.juliano.apichaves.ApiChavesApplication" />
-      <module name="apigerfin" />
+      <module name="apichaves" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

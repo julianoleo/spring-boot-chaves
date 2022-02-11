@@ -55,6 +55,14 @@ public class ExcpetionHandler extends ResponseEntityExceptionHandler {
         return ResponseEntity.status(HttpStatus.NO_CONTENT).body(response);
     }
 
+    @ExceptionHandler(com.juliano.apichaves.exceptions.UnauthorizedException.class)
+    protected ResponseEntity<List<ErrorResponseDto>> handleUnauthorizedException(com.juliano.apichaves.exceptions.UnauthorizedException ex, HttpServletRequest request) {
+        List<ErrorResponseDto> response = Collections.singletonList(new ErrorResponseDto(UNAUTHORIZED_CODE, ex.getMessage()));
+        HttpHeaders headers = formataHeader(request.getHeaderNames(), request);
+        APILogger.unauthorized(response, APILogger.filterHeader(headers));
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
+    }
+
     @Override
     protected ResponseEntity handleMissingServletRequestParameter(MissingServletRequestParameterException ex, HttpHeaders headers, HttpStatus status, WebRequest request){
         DetalhesExcecao detalhes = new DetalhesExcecao(INVALID_CODE, ex.getParameterName() + "");
