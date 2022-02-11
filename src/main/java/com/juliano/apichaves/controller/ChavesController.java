@@ -1,9 +1,11 @@
 package com.juliano.apichaves.controller;
 
 import com.juliano.apichaves.autentication.Autentication;
+import com.juliano.apichaves.autentication.ValidaAuthentication;
 import com.juliano.apichaves.logs.APILogger;
 import com.juliano.apichaves.logs.models.ResponseDto;
 import com.juliano.apichaves.model.Chaves;
+import com.juliano.apichaves.model.ValidationDto;
 import com.juliano.apichaves.service.ChavesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -26,6 +28,21 @@ public class ChavesController {
 
     @Autowired
     private Autentication autentication;
+
+    @Autowired
+    private ValidaAuthentication validaAuthentication;
+
+    @GetMapping("/validation")
+    public ResponseEntity<ValidationDto> validaChave(
+            HttpServletRequest request,
+            @RequestHeader HttpHeaders headers
+    ) {
+        var _result = validaAuthentication.validaAutenticacao(request, headers);
+        var _response = new ResponseEntity<>(_result, HttpStatus.OK);
+        var _responseLog = new ResponseDto<>(_result);
+        APILogger.ok(_responseLog.getData(), APILogger.filterHeader(headers));
+        return _response;
+    }
 
     @GetMapping("/{idChave}")
     public ResponseEntity<Chaves> cadastraChave(
