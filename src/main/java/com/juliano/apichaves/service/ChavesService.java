@@ -18,7 +18,7 @@ public class ChavesService {
     public Optional<Chaves> findById(String id) {
         var _chave =  chavesRepository.findById(id);
         if(_chave.isEmpty()){
-            throw new NoContentRuntimeException();
+            throw new UnauthorizedException("Senha inválida.");
         } else {
             return _chave;
         }
