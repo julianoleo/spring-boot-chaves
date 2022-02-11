@@ -6,7 +6,7 @@
         <encoder class="net.logstash.logback.encoder.LogstashEncoder">
             <includeContext>false</includeContext>
             <timestampPattern>yyyy-MM-dd HH:mm:ss</timestampPattern>
-            <customFields>{"application": "APIGerfin"}</customFields>
+            <customFields>{"application": "API Chaves"}</customFields>
             <fieldNames>
                 <message>[ignore]</message>
                 <timestamp>timestamp</timestamp>

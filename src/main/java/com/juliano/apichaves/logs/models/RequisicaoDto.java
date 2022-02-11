@@ -1,4 +1,4 @@
-package com.juliano.apichaves.model;
+package com.juliano.apichaves.logs.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
