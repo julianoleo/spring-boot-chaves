@@ -1,6 +1,7 @@
 package com.juliano.apichaves.service;
 
 import com.juliano.apichaves.exceptions.NoContentRuntimeException;
+import com.juliano.apichaves.exceptions.UnauthorizedException;
 import com.juliano.apichaves.model.Chaves;
 import com.juliano.apichaves.repository.ChavesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class ChavesService {
     public Chaves buscaPorId(String id){
         var _chave = findById(id);
         if(_chave.isEmpty()){
-            throw new NoContentRuntimeException();
+            throw new UnauthorizedException("Senha inválida.");
         }
         else {
             return _chave.orElseThrow();
