@@ -5,10 +5,8 @@ import com.juliano.apichaves.model.Chaves;
 import com.juliano.apichaves.service.ChavesService;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
-import org.springframework.web.servlet.function.ServerRequest;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
@@ -16,8 +14,7 @@ import java.util.Optional;
 @Service
 public class ValidaAdmin {
 
-    @Value("${admin.user}")
-    private String adminUser;
+    private static final String adminUser = "admin";
 
     @Autowired
     private ChavesService chavesService;
