@@ -1,5 +1,6 @@
 package com.juliano.apichaves.service;
 
+import com.juliano.apichaves.exceptions.InternalServerErrorException;
 import com.juliano.apichaves.exceptions.UnauthorizedException;
 import com.juliano.apichaves.model.Chaves;
 import com.juliano.apichaves.repository.ChavesRepository;
@@ -37,7 +38,14 @@ public class ChavesService {
         return findById(id);
     }
 
+    public Optional<Chaves> findByIdCliente(String idCliente) { return findByIdCliente(idCliente); }
+
     public Chaves insert(Chaves chaves) {
-        return chavesRepository.insert(chaves);
+        var _chave = findByIdCliente(chaves.getIdCliente());
+        if(_chave.isPresent()){
+            throw new InternalServerErrorException("Cliente com chave cadastrada.");
+        } else {
+            return chavesRepository.insert(chaves);
+        }
     }
 }

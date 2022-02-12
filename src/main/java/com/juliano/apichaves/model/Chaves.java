@@ -14,10 +14,14 @@ public class Chaves {
     @Id
     private String id;
     private Date dataCriacao;
-    private String donoChave;
+    private String idCliente;
+    private String usuario;
+    private Date dataValidade;
 
-    public Chaves(Date dataCriacao, String donoChave) {
+    public Chaves(Date dataCriacao, String idCliente, String usuario, Date dataValidade) {
         this.dataCriacao = new Date();
-        this.donoChave = donoChave;
+        this.idCliente = idCliente;
+        this.usuario = usuario;
+        this.dataValidade = dataValidade;
     }
 }

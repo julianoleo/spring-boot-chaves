@@ -1,6 +1,5 @@
 package com.juliano.apichaves.autentication;
 
-import com.juliano.apichaves.exceptions.UnauthorizedException;
 import com.juliano.apichaves.model.Chaves;
 import com.juliano.apichaves.model.ValidationDto;
 import com.juliano.apichaves.service.ChavesService;
@@ -48,7 +47,7 @@ public class ValidaAuthentication {
         if(chaves == null || chaves.isEmpty() || !chaves.isPresent()) {
             return false;
         } else {
-            if(chaves.orElseThrow().getDonoChave().equals(usuario) && chaves.orElseThrow().getId().equals(senha)) {
+            if(chaves.orElseThrow().getUsuario().equals(usuario) && chaves.orElseThrow().getId().equals(senha)) {
                 return true;
             } else {
                 return false;

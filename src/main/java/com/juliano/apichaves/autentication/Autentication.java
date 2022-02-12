@@ -31,7 +31,7 @@ public class Autentication {
         if(chaves == null || chaves.isEmpty() || !chaves.isPresent()) {
             return false;
         } else {
-            if(chaves.orElseThrow().getDonoChave().equals(usuario) && chaves.orElseThrow().getId().equals(senha)) {
+            if(chaves.orElseThrow().getUsuario().equals(usuario) && chaves.orElseThrow().getId().equals(senha)) {
                 return true;
             } else {
                 return false;
