@@ -9,6 +9,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 import java.util.Optional;
 
 @Service
@@ -28,18 +29,31 @@ public class ValidaAuthentication {
                     401,
                     "Password incorreto."
             );
-        } else {
-            if (checaIdentidade(_result, _usuario, _senha)){
+        }
+        else if (checaIdentidade(_result, _usuario, _senha)){
+            if(!checaValidade(_result.orElseThrow().getDataValidade())) {
+                return new ValidationDto(
+                        401,
+                        "Validade vencida."
+                );
+            } else {
                 return new ValidationDto(
                         200,
                         "Autorized."
                 );
-            } else {
-                return new ValidationDto(
-                        401,
-                        "User or password incorreto."
-                );
             }
+        }
+        else if (!checaIdentidade(_result, _usuario, _senha)) {
+            return new ValidationDto(
+                    401,
+                    "User or password incorreto."
+            );
+        }
+        else {
+            return new ValidationDto(
+                    401,
+                    "Não autorizado."
+            );
         }
     }
 
@@ -55,4 +69,11 @@ public class ValidaAuthentication {
         }
     }
 
+    private boolean checaValidade(Date _date) {
+        if(_date.after(new Date())){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
