@@ -2,6 +2,7 @@ package com.juliano.apichaves.controller;
 
 import com.juliano.apichaves.autentication.Autentication;
 import com.juliano.apichaves.autentication.ValidaAuthentication;
+import com.juliano.apichaves.exceptions.ConstraintViolarionExceptionBad;
 import com.juliano.apichaves.logs.APILogger;
 import com.juliano.apichaves.logs.models.ResponseDto;
 import com.juliano.apichaves.model.Chaves;
@@ -15,7 +16,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.ConstraintViolationException;
+
 import java.util.HashSet;
 
 @RestController
@@ -64,8 +65,9 @@ public class ChavesController {
             @RequestBody Chaves chaves,
             @RequestHeader HttpHeaders headers
     ) {
-        if(chaves.getDonoChave().isEmpty()) {
-            throw new ConstraintViolationException("Chave Vazia.", new HashSet<>());
+        if(chaves == null || chaves.getUsuario().isEmpty() || chaves.getUsuario().isBlank()) {
+            // throw new ConstraintViolationException("Chave Vazia.", new HashSet<>());
+            throw new ConstraintViolarionExceptionBad("Falta elementos no request.");
         }
         else {
             var _result = chavesService.insert(chaves);
