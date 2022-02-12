@@ -1,10 +1,10 @@
 package com.juliano.apichaves.controller;
 
 import com.juliano.apichaves.autentication.Autentication;
+import com.juliano.apichaves.autentication.ValidaAdmin;
 import com.juliano.apichaves.autentication.ValidaAuthentication;
 import com.juliano.apichaves.logs.APILogger;
 import com.juliano.apichaves.logs.models.ResponseDto;
-import com.juliano.apichaves.model.Chaves;
 import com.juliano.apichaves.model.ChavesRequest;
 import com.juliano.apichaves.model.ValidationDto;
 import com.juliano.apichaves.service.ChavesService;
@@ -28,6 +28,9 @@ public class ChavesController {
 
     @Autowired
     private Autentication autentication;
+
+    @Autowired
+    private ValidaAdmin validaAdmin;
 
     @Autowired
     private ValidaAuthentication validaAuthentication;
@@ -64,6 +67,7 @@ public class ChavesController {
             @RequestBody ChavesRequest chaves,
             @RequestHeader HttpHeaders headers
     ) throws ParseException {
+            validaAdmin.verificaAuth(request, headers);
             var _result = chavesService.insert(chaves);
             var _response = new ResponseEntity<>(_result, HttpStatus.OK);
             var _responseLog = new ResponseDto<>(_result);

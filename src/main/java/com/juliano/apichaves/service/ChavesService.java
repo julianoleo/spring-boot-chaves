@@ -1,6 +1,5 @@
 package com.juliano.apichaves.service;
 
-import com.juliano.apichaves.exceptions.MissingServletRequestParameter;
 import com.juliano.apichaves.exceptions.InternalServerErrorException;
 import com.juliano.apichaves.exceptions.UnauthorizedException;
 import com.juliano.apichaves.model.Chaves;
@@ -8,13 +7,9 @@ import com.juliano.apichaves.model.ChavesRequest;
 import com.juliano.apichaves.repository.ChavesRepository;
 import com.juliano.apichaves.utils.TrataData;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.client.HttpStatusCodeException;
 
 import java.text.ParseException;
-import java.util.Date;
 import java.util.Optional;
 
 @Service
@@ -24,12 +19,7 @@ public class ChavesService {
     private ChavesRepository chavesRepository;
 
     public Optional<Chaves> findById(String id) {
-        var _chave = chavesRepository.findById(id);
-        if (_chave.isEmpty()) {
-            throw new UnauthorizedException("Senha inválida.");
-        } else {
-            return _chave;
-        }
+        return chavesRepository.findById(id);
     }
 
     public Chaves buscaPorId(String id) {
