@@ -5,6 +5,7 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Data
@@ -18,7 +19,7 @@ public class Chaves {
     private String usuario;
     private Date dataValidade;
 
-    public Chaves(Date dataCriacao, String idCliente, String usuario, Date dataValidade) {
+    public Chaves(String idCliente, String usuario, Date dataValidade) {
         this.dataCriacao = new Date();
         this.idCliente = idCliente;
         this.usuario = usuario;

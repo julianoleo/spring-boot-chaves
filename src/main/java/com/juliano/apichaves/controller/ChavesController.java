@@ -2,10 +2,10 @@ package com.juliano.apichaves.controller;
 
 import com.juliano.apichaves.autentication.Autentication;
 import com.juliano.apichaves.autentication.ValidaAuthentication;
-import com.juliano.apichaves.exceptions.ConstraintViolarionExceptionBad;
 import com.juliano.apichaves.logs.APILogger;
 import com.juliano.apichaves.logs.models.ResponseDto;
 import com.juliano.apichaves.model.Chaves;
+import com.juliano.apichaves.model.ChavesRequest;
 import com.juliano.apichaves.model.ValidationDto;
 import com.juliano.apichaves.service.ChavesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +16,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-
-import java.util.HashSet;
+import java.text.ParseException;
 
 @RestController
 @Validated
@@ -46,7 +45,7 @@ public class ChavesController {
     }
 
     @GetMapping("/{idChave}")
-    public ResponseEntity<Chaves> cadastraChave(
+    public ResponseEntity<?> cadastraChave(
             HttpServletRequest request,
             @PathVariable(name = "idChave") String idChave,
             @RequestHeader HttpHeaders headers
@@ -60,21 +59,15 @@ public class ChavesController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<Chaves> cadastraChave(
+    public ResponseEntity<?> cadastraChave(
             HttpServletRequest request,
-            @RequestBody Chaves chaves,
+            @RequestBody ChavesRequest chaves,
             @RequestHeader HttpHeaders headers
-    ) {
-        if(chaves == null || chaves.getUsuario().isEmpty() || chaves.getUsuario().isBlank()) {
-            // throw new ConstraintViolationException("Chave Vazia.", new HashSet<>());
-            throw new ConstraintViolarionExceptionBad("Falta elementos no request.");
-        }
-        else {
+    ) throws ParseException {
             var _result = chavesService.insert(chaves);
             var _response = new ResponseEntity<>(_result, HttpStatus.OK);
             var _responseLog = new ResponseDto<>(_result);
             APILogger.ok(_responseLog.getData(), APILogger.filterHeader(headers));
             return _response;
-        }
     }
 }
