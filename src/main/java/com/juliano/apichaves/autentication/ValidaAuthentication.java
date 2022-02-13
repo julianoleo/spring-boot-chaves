@@ -27,32 +27,32 @@ public class ValidaAuthentication {
         if(_result == null || _result.isEmpty() || !_result.isPresent()) {
             return new ValidationDto(
                     401,
-                    "Password incorreto."
+                    "Incorrect Password."
             );
         }
         else if (checaIdentidade(_result, _usuario, _senha)){
             if(!checaValidade(_result.orElseThrow().getDataValidade())) {
                 return new ValidationDto(
                         401,
-                        "Validade vencida."
+                        "Validity Expired."
                 );
             } else {
                 return new ValidationDto(
                         200,
-                        "Autorized."
+                        "Authorized."
                 );
             }
         }
         else if (!checaIdentidade(_result, _usuario, _senha)) {
             return new ValidationDto(
                     401,
-                    "User or password incorreto."
+                    "Incorrect username or password."
             );
         }
         else {
             return new ValidationDto(
                     401,
-                    "Não autorizado."
+                    "Not authorized."
             );
         }
     }
