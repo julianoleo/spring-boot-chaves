@@ -68,7 +68,7 @@ public class ChavesService {
         }
     }
 
-    public Chaves update(String idUsuario, Chaves chaves) throws ParseException {
+    public Chaves update(String idUsuario, ChavesRequest chaves) throws ParseException {
         validaUsuario.checaUsuario(idUsuario, chaves);
         Optional<Chaves> _usuario = chavesRepository.findById(idUsuario);
         if(chaves.getIdCliente() != null){ _usuario.orElseThrow().setIdCliente(chaves.getIdCliente()); }

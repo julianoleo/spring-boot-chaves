@@ -2,6 +2,7 @@ package com.juliano.apichaves.utils;
 
 import com.juliano.apichaves.exceptions.NotFoundException;
 import com.juliano.apichaves.model.Chaves;
+import com.juliano.apichaves.model.ChavesRequest;
 import com.juliano.apichaves.repository.ChavesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +13,7 @@ public class ValidaUsuario {
     @Autowired
     private ChavesRepository chavesRepository;
 
-    public void checaUsuario(String idUsuario, Chaves chaves) {
+    public void checaUsuario(String idUsuario, ChavesRequest chaves) {
         if(!usuarioExiste(idUsuario)){
             throw new NotFoundException("Usuário inexistente.");
         }
