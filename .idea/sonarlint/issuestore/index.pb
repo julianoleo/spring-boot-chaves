@@ -27,9 +27,5 @@ Msrc/main/java/com/juliano/apichaves/exceptions/NoContentRuntimeException.java,
 Psrc/main/java/com/juliano/apichaves/exceptions/InternalServerErrorException.java,8\8\8839ae4ee46d81642514a5e5b00f065a2409bf02
 ‚
 Rsrc/main/java/com/juliano/apichaves/exceptions/MissingServletRequestParameter.java,b\5\b549d9b4258b2fbbc3f84cd7dde8cafd8825ed51
-t
-Dsrc/main/java/com/juliano/apichaves/exceptions/ExcpetionHandler.java,8\b\8bd3e8cc392bafbb08136c62304250d0f834ae8d
-l
-<src/main/java/com/juliano/apichaves/model/ChavesRequest.java,d\3\d3682df1082e811eaa4e84b57daa0c969b0778d8
 l
 <src/main/java/com/juliano/apichaves/model/ValidationDto.java,7\1\71aeb739e0c840fc7219621dcb8b25c2335751e1

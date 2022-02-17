@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9499409c-779a-4b5a-8ef1-7fc96c8b75d0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/utils/ValidaUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/09c973ff8739535ab8de310ab220942c1e546e4e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/9/194dc13f8dfbaf621a21de4d62c0fbf58cf55493" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/479bd396c226d9ea830225dd829e183094eeb60a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/controller/ChavesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/controller/ChavesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/service/ChavesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juliano/apichaves/service/ChavesService.java" afterDir="false" />
-    </list>
+    <list default="true" id="9499409c-779a-4b5a-8ef1-7fc96c8b75d0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

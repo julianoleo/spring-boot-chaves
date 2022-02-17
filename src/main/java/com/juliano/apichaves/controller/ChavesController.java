@@ -80,7 +80,7 @@ public class ChavesController {
     public ResponseEntity<?> cadastraChave(
             HttpServletRequest request,
             @PathVariable(name = "idChave") String idChave,
-            @RequestBody Chaves chaves,
+            @RequestBody ChavesRequest chaves,
             @RequestHeader HttpHeaders headers
     ) throws ParseException {
         validaAdmin.verificaAuth(request, headers);
