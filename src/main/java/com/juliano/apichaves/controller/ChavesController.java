@@ -5,6 +5,7 @@ import com.juliano.apichaves.autentication.ValidaAdmin;
 import com.juliano.apichaves.autentication.ValidaAuthentication;
 import com.juliano.apichaves.logs.APILogger;
 import com.juliano.apichaves.logs.models.ResponseDto;
+import com.juliano.apichaves.model.Chaves;
 import com.juliano.apichaves.model.ChavesRequest;
 import com.juliano.apichaves.model.ValidationDto;
 import com.juliano.apichaves.service.ChavesService;
@@ -62,7 +63,7 @@ public class ChavesController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<?> cadastraChave(
+    public ResponseEntity<?> updateChave(
             HttpServletRequest request,
             @RequestBody ChavesRequest chaves,
             @RequestHeader HttpHeaders headers
@@ -73,5 +74,20 @@ public class ChavesController {
             var _responseLog = new ResponseDto<>(_result);
             APILogger.ok(_responseLog.getData(), APILogger.filterHeader(headers));
             return _response;
+    }
+
+    @PutMapping("/update/{idChave}")
+    public ResponseEntity<?> cadastraChave(
+            HttpServletRequest request,
+            @PathVariable(name = "idChave") String idChave,
+            @RequestBody Chaves chaves,
+            @RequestHeader HttpHeaders headers
+    ) throws ParseException {
+        validaAdmin.verificaAuth(request, headers);
+        var _result = chavesService.update(idChave, chaves);
+        var _response = new ResponseEntity<>(_result, HttpStatus.OK);
+        var _responseLog = new ResponseDto<>(_result);
+        APILogger.ok(_responseLog.getData(), APILogger.filterHeader(headers));
+        return _response;
     }
 }
