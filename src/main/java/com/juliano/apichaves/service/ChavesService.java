@@ -6,6 +6,7 @@ import com.juliano.apichaves.model.Chaves;
 import com.juliano.apichaves.model.ChavesRequest;
 import com.juliano.apichaves.repository.ChavesRepository;
 import com.juliano.apichaves.utils.TrataData;
+import com.juliano.apichaves.utils.ValidaUsuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,9 @@ public class ChavesService {
 
     @Autowired
     private ChavesRepository chavesRepository;
+
+    @Autowired
+    private ValidaUsuario validaUsuario;
 
     public Optional<Chaves> findById(String id) {
         return chavesRepository.findById(id);
@@ -62,6 +66,15 @@ public class ChavesService {
                 return chavesRepository.insert(chRequest);
             }
         }
+    }
+
+    public Chaves update(String idUsuario, Chaves chaves) throws ParseException {
+        validaUsuario.checaUsuario(idUsuario, chaves);
+        Optional<Chaves> _usuario = chavesRepository.findById(idUsuario);
+        if(chaves.getIdCliente() != null){ _usuario.orElseThrow().setIdCliente(chaves.getIdCliente()); }
+        if(chaves.getUsuario() != null){ _usuario.orElseThrow().setUsuario(chaves.getUsuario()); }
+        if(chaves.getDataValidade() != null){ _usuario.orElseThrow().setDataValidade(TrataData.formataData(chaves.getDataValidade().toString())); }
+        return chavesRepository.save(_usuario.orElseThrow());
     }
 }
 

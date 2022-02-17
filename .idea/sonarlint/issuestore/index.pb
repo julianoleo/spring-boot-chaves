@@ -31,13 +31,5 @@ t
 Dsrc/main/java/com/juliano/apichaves/exceptions/ExcpetionHandler.java,8\b\8bd3e8cc392bafbb08136c62304250d0f834ae8d
 l
 <src/main/java/com/juliano/apichaves/model/ChavesRequest.java,d\3\d3682df1082e811eaa4e84b57daa0c969b0778d8
-h
-8src/main/java/com/juliano/apichaves/utils/TrataData.java,1\8\18f523470ed9e9a37471ba52dbc044117673e7f2
-t
-Dsrc/main/java/com/juliano/apichaves/repository/ChavesRepository.java,0\9\09c973ff8739535ab8de310ab220942c1e546e4e
-e
-5src/main/java/com/juliano/apichaves/model/Chaves.java,4\7\479bd396c226d9ea830225dd829e183094eeb60a
 l
 <src/main/java/com/juliano/apichaves/model/ValidationDto.java,7\1\71aeb739e0c840fc7219621dcb8b25c2335751e1
-n
->src/main/java/com/juliano/apichaves/service/ChavesService.java,1\9\194dc13f8dfbaf621a21de4d62c0fbf58cf55493
