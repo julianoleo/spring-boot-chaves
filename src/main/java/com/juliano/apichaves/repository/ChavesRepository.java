@@ -9,6 +9,4 @@ import java.util.Optional;
 @Repository
 public interface ChavesRepository extends MongoRepository<Chaves, String> {
     Optional<Chaves> findByIdCliente(String idCliente);
-
-    void delete(String idUsuario);
 }
