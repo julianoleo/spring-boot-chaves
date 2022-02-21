@@ -1,6 +1,7 @@
 package com.juliano.apichaves.service;
 
 import com.juliano.apichaves.exceptions.InternalServerErrorException;
+import com.juliano.apichaves.exceptions.NotFoundException;
 import com.juliano.apichaves.exceptions.UnauthorizedException;
 import com.juliano.apichaves.model.Chaves;
 import com.juliano.apichaves.model.ChavesRequest;
@@ -75,6 +76,15 @@ public class ChavesService {
         if(chaves.getUsuario() != null){ _usuario.orElseThrow().setUsuario(chaves.getUsuario()); }
         if(chaves.getDataValidade() != null){ _usuario.orElseThrow().setDataValidade(TrataData.formataData(chaves.getDataValidade().toString())); }
         return chavesRepository.save(_usuario.orElseThrow());
+    }
+
+    public void delete(String idUsuario) throws ParseException {
+        Optional<Chaves> _usuario = chavesRepository.findById(idUsuario);
+        if(_usuario.isEmpty()) {
+            throw new NotFoundException("Usuário não encontrado.");
+        } else {
+            chavesRepository.delete(idUsuario);
+        }
     }
 }
 
