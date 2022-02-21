@@ -89,4 +89,18 @@ public class ChavesController {
         APILogger.ok(_responseLog.getData(), APILogger.filterHeader(headers));
         return _response;
     }
+
+    @DeleteMapping("/delete/{idChave}")
+    public ResponseEntity<?> deleteChave(
+            HttpServletRequest request,
+            @PathVariable(name = "idChave") String idChave,
+            @RequestHeader HttpHeaders headers
+    ) throws ParseException {
+        validaAdmin.verificaAuth(request, headers);
+        chavesService.delete(idChave);
+        var _response = new ResponseEntity<>("", HttpStatus.OK);
+        var _responseLog = new ResponseDto<>("");
+        APILogger.ok(_responseLog.getData(), APILogger.filterHeader(headers));
+        return _response;
+    }
 }

@@ -1,4 +1,2 @@
-@ECHO OFF.
-
-@cls
-@heroku logs -a spring-boot-chaves --tail
+#!/bin/bash
+heroku logs --source app -t -a spring-boot-chaves --tail
