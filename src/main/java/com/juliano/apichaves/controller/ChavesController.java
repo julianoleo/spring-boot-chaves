@@ -5,7 +5,6 @@ import com.juliano.apichaves.autentication.ValidaAdmin;
 import com.juliano.apichaves.autentication.ValidaAuthentication;
 import com.juliano.apichaves.logs.APILogger;
 import com.juliano.apichaves.logs.models.ResponseDto;
-import com.juliano.apichaves.model.Chaves;
 import com.juliano.apichaves.model.ChavesRequest;
 import com.juliano.apichaves.model.ValidationDto;
 import com.juliano.apichaves.service.ChavesService;
