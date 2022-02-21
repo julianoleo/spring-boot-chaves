@@ -78,12 +78,12 @@ public class ChavesService {
         return chavesRepository.save(_usuario.orElseThrow());
     }
 
-    public void delete(String idUsuario) throws ParseException {
+    public void delete(String idUsuario){
         Optional<Chaves> _usuario = chavesRepository.findById(idUsuario);
-        if(_usuario.isEmpty()) {
+        if (_usuario.isEmpty()) {
             throw new NotFoundException("Usuário não encontrado.");
         } else {
-            chavesRepository.delete(idUsuario);
+            chavesRepository.deleteById(idUsuario);
         }
     }
 }
